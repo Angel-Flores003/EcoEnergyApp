@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35806.99 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EcoEnergyApp", "EcoEnergyApp.csproj", "{7AC1AAAD-2ABA-46A2-89B6-7DD2E7ACE623}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7AC1AAAD-2ABA-46A2-89B6-7DD2E7ACE623}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AC1AAAD-2ABA-46A2-89B6-7DD2E7ACE623}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AC1AAAD-2ABA-46A2-89B6-7DD2E7ACE623}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AC1AAAD-2ABA-46A2-89B6-7DD2E7ACE623}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1981220C-DBE4-49C9-B04E-E110DC81B4A5}
+	EndGlobalSection
+EndGlobal
