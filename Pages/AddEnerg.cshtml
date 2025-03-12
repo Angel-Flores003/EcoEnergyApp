@@ -1,0 +1,29 @@
+﻿@page
+@model gestioenergia.Pages.AddEnergModel
+@{
+	ViewData["Title"] = "Afegir energia";
+}
+
+<h2>Afegir energia</h2>
+<form method="post">
+	<div class="form-group">
+		<label asp-for="Energi.ID"></label>
+		<input asp-for="Energi.ID" class="form-control" />
+		<span asp-validation-for="Energi.ID" class="text-danger"></span>
+	</div>
+	<div class="form-group">
+		<label asp-for="Energi.Name"></label>
+		<input asp-for="Energi.Name" class="form-control" />
+		<span asp-validation-for="Energi.Name" class="text-danger"></span>
+	</div>
+	<div class="form-group">
+		<label asp-for="Energi.Amount"></label>
+		<input asp-for="Energi.Amount" class="form-control" />
+		<span asp-validation-for="Energi.Amount" class="text-danger"></span>
+	</div>
+	<button type="submit" class="btn btn-primary">Afegir</button>
+</form>
+
+@section Scripts {
+	<partial name="_ValidationScriptsPartial" />
+}

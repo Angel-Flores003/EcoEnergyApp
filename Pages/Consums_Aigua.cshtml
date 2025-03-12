@@ -1,0 +1,27 @@
+﻿@page
+@model gestioconsums.Pages.Consums_AiguaModel
+@{
+	ViewData["Title"] = "Consums per cmoarques";
+}
+
+<h2>Consums per comarques</h2>
+
+<table class="table">
+	<thead>
+		<tr>
+			<th>Comarques</th>
+			<th>Consumo</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var consum in Model.Consum)
+		{
+			<tr>
+				<td>@consum.Comarques</td>
+				<td>@consum.Consumo</td>
+			</tr>
+		}
+	</tbody>
+</table>
+
+<a asp-page="Afegir" class="btn btn-primary">Afegir nous consums</a>

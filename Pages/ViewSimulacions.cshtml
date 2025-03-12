@@ -1,0 +1,39 @@
+﻿@page
+@model gestiosimulacions.Pages.ViewSimulacionsModel
+@{
+	ViewData["Title"] = "Llistat de simulacions";
+}
+
+<h2>Llistat de simulacions</h2>
+
+<table class="table">
+	<thead>
+		<tr>
+			<th>ID</th>
+			<th>Sistema</th>
+			<th>DataHora</th>
+			<th>Rati</th>
+			<th>CostkWh</th>
+			<th>PreukWh</th>
+			<th>CostTotal</th>
+			<th>PreuTotal</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var simulacio in Model.Simulacio)
+		{
+			<tr>
+				<td>@simulacio.ID</td>
+				<td>@simulacio.Sistema</td>
+				<td>@simulacio.DataHora</td>
+				<td>@simulacio.Rati</td>
+				<td>@simulacio.CostkWh</td>
+				<td>@simulacio.PreukWh</td>
+				<td>@simulacio.CostTotal</td>
+				<td>@simulacio.PreuTotal</td>
+			</tr>
+		}
+	</tbody>
+</table>
+
+<a asp-page="AddSimulacio" class="btn btn-primary">Afegir noves simulacions</a>

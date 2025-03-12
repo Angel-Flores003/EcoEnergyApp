@@ -1,0 +1,58 @@
+﻿@page
+@model gestiosimulacions.Pages.AddSimulacioModel
+@{
+	ViewData["Title"] = "Afegir simulació";
+}
+
+<h2>Afegir simulacio</h2>
+<form method="post">
+	<div class="form-group">
+		<label asp-for="Simulacio.ID"></label>
+		<input asp-for="Simulacio.ID" class="form-control" />
+		<span asp-validation-for="Simulacio.ID" class="text-danger"></span>
+	</div>
+	<div class="form-group">
+		<label asp-for="Simulacio.Sistema"></label>
+		<select asp-for="Simulacio.Sistema" class="form-control" >
+			<option value="Solar">Sistema Solar</option>
+			<option value="Eolic">Sistema Eòlic</option>
+			<option value="Hidroelectric">Sistema Hidroelectric</option>
+		</select>
+		<span asp-validation-for="Simulacio.Sistema" class="text-danger"></span>
+	</div>
+	<div class="form-group">
+		<label asp-for="Simulacio.DataHora"></label>
+		<input asp-for="Simulacio.DataHora" class="form-control" />
+		<span asp-validation-for="Simulacio.DataHora" class="text-danger"></span>
+	</div>
+	<div class="form-group">
+		<label asp-for="Simulacio.Rati"></label>
+		<input asp-for="Simulacio.Rati" class="form-control" />
+		<span asp-validation-for="Simulacio.Rati" class="text-danger"></span>
+	</div>
+	<div class="form-group">
+		<label asp-for="Simulacio.CostkWh"></label>
+		<input asp-for="Simulacio.CostkWh" class="form-control" />
+		<span asp-validation-for="Simulacio.CostkWh" class="text-danger"></span>
+	</div>
+	<div class="form-group">
+		<label asp-for="Simulacio.PreukWh"></label>
+		<input asp-for="Simulacio.PreukWh" class="form-control" />
+		<span asp-validation-for="Simulacio.PreukWh" class="text-danger"></span>
+	</div>
+	<div class="form-group">
+		<label asp-for="Simulacio.CostTotal"></label>
+		<input asp-for="Simulacio.CostTotal" class="form-control" />
+		<span asp-validation-for="Simulacio.CostTotal" class="text-danger"></span>
+	</div>
+	<div class="form-group">
+		<label asp-for="Simulacio.PreuTotal"></label>
+		<input asp-for="Simulacio.PreuTotal" class="form-control" />
+		<span asp-validation-for="Simulacio.PreuTotal" class="text-danger"></span>
+	</div>
+	<button type="submit" class="btn btn-primary">Afegir</button>
+</form>
+
+@section Scripts {
+	<partial name="_ValidationScriptsPartial" />
+}

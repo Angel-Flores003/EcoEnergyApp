@@ -1,0 +1,24 @@
+﻿@page
+@model gestioconsums.Pages.AddConsumsModel
+@{
+	ViewData["Title"] = "Afegir Consum de comarca";
+}
+
+<h2>Afegir consum</h2>
+<form method="post">
+	<div class="form-group">
+		<label asp-for="Consum.Comarques"></label>
+		<input asp-for="Consum.Comarques" class="form-control" />
+		<span asp-validation-for="Consum.Comarques" class="text-danger"></span>
+	</div>
+	<div class="form-group">
+		<label asp-for="Consum.Consumo"></label>
+		<input asp-for="Consum.Consumo" class="form-control" />
+		<span asp-validation-for="Consum.Consumo" class="text-danger"></span>
+	</div>
+	<button type="submit" class="btn btn-primary">Afegir</button>
+</form>
+
+@section Scripts {
+	<partial name="_ValidationScriptsPartial" />
+}

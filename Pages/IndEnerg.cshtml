@@ -1,0 +1,29 @@
+﻿@page
+@model gestioenergia.Pages.IndEnergModel
+@{
+	ViewData["Title"] = "Indicadors d'energia";
+}
+
+<h2>Indicadors d'energia</h2>
+
+<table class="table">
+	<thead>
+		<tr>
+			<th>ID</th>
+			<th>Nom</th>
+			<th>Quantitat</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var energia in Model.Energi)
+		{
+			<tr>
+				<td>@energia.ID</td>
+				<td>@energia.Name</td>
+				<td>@energia.Amount</td>
+			</tr>
+		}
+	</tbody>
+</table>
+
+<a asp-page="AddEnerg" class="btn btn-primary">Afegir noves energies</a>
