@@ -1,12 +1,22 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
 
-namespace EcoEnergyApp.Models
+namespace Example.Models
 {
-    public class Simulacions : Controller
+    [Table("Simulacions")]
+    public class Simulacions
     {
-        public IActionResult Index()
-        {
-            return View();
-        }
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int Id { get; set; }
+        public string? Type { get; set; }
+        public int HoresSol { get; set; }
+        public int VelocitatVent { get; set; }
+        public int CabalAigua { get; set; }
+        public int Rati{ get; set; }
+        public int EnergiaGenerada { get; set; }
+        public int CostKWh { get; set; }
+        public int PreuKWh { get; set; }
+        public DateTime DataHora { get; set; }
     }
 }

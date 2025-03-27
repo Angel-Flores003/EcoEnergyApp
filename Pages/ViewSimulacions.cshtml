@@ -5,14 +5,16 @@
 }
 
 <h2>Llistat de simulacions</h2>
-
 <table class="table">
 	<thead>
 		<tr>
+			@* Nombre de los atributos *@
 			<th>ID</th>
-			<th>Sistema</th>
 			<th>DataHora</th>
+			<th>Sistema</th>
+			<th>EnergyType</th>
 			<th>Rati</th>
+			<th>EnergiaGenerada</th>
 			<th>CostkWh</th>
 			<th>PreukWh</th>
 			<th>CostTotal</th>
@@ -23,10 +25,13 @@
 		@foreach (var simulacio in Model.Simulacio)
 		{
 			<tr>
+				@* Referencias de los atributos *@
 				<td>@simulacio.ID</td>
-				<td>@simulacio.Sistema</td>
 				<td>@simulacio.DataHora</td>
+				<td>@simulacio.Sistema</td>
+				<td>@simulacio.EnergyType</td>
 				<td>@simulacio.Rati</td>
+				<td>@simulacio.EnergiaGenerada</td>
 				<td>@simulacio.CostkWh</td>
 				<td>@simulacio.PreukWh</td>
 				<td>@simulacio.CostTotal</td>
@@ -36,4 +41,4 @@
 	</tbody>
 </table>
 
-<a asp-page="AddSimulacio" class="btn btn-primary">Afegir noves simulacions</a>
+<a asp-page="AddSimulacio" class="btn btn-primary">Afegir</a>

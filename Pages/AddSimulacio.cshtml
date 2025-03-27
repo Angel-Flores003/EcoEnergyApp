@@ -6,11 +6,17 @@
 
 <h2>Afegir simulacio</h2>
 <form method="post">
+	@* ID *@
 	<div class="form-group">
 		<label asp-for="Simulacio.ID"></label>
 		<input asp-for="Simulacio.ID" class="form-control" />
 		<span asp-validation-for="Simulacio.ID" class="text-danger"></span>
 	</div>
+	@* Fecha y hora del sistema *@
+	<div class="form-group">
+		<span asp-validation-for="Simulacio.DataHora" class="text-danger"></span>
+	</div>
+	@* Da las opciones de los diferentes sistemas*@
 	<div class="form-group">
 		<label asp-for="Simulacio.Sistema"></label>
 		<select asp-for="Simulacio.Sistema" class="form-control" >
@@ -20,34 +26,40 @@
 		</select>
 		<span asp-validation-for="Simulacio.Sistema" class="text-danger"></span>
 	</div>
+	@* Deberia variar*@
 	<div class="form-group">
-		<label asp-for="Simulacio.DataHora"></label>
-		<input asp-for="Simulacio.DataHora" class="form-control" />
-		<span asp-validation-for="Simulacio.DataHora" class="text-danger"></span>
+		<label asp-for="Simulacio.EnergyType"></label>
+		<input asp-for="Simulacio.EnergyType" class="form-control" />
+		<span asp-validation-for="Simulacio.EnergyType" class="text-danger"></span>
 	</div>
+	@* Rati *@
 	<div class="form-group">
 		<label asp-for="Simulacio.Rati"></label>
-		<input asp-for="Simulacio.Rati" class="form-control" />
+		<input asp-for="Simulacio.Rati" class="form-control" min="0.01" max="3" step="0.01" />
 		<span asp-validation-for="Simulacio.Rati" class="text-danger"></span>
 	</div>
+	@* Energia generada *@
+	<div class="form-group">
+		<span asp-validation-for="Simulacio.EnergiaGenerada" class="text-danger"></span>
+	</div>
+	@* Coste del KWh *@
 	<div class="form-group">
 		<label asp-for="Simulacio.CostkWh"></label>
-		<input asp-for="Simulacio.CostkWh" class="form-control" />
+		<input asp-for="Simulacio.CostkWh" class="form-control"/>
 		<span asp-validation-for="Simulacio.CostkWh" class="text-danger"></span>
 	</div>
+	@* Precio del KWh *@
 	<div class="form-group">
 		<label asp-for="Simulacio.PreukWh"></label>
 		<input asp-for="Simulacio.PreukWh" class="form-control" />
 		<span asp-validation-for="Simulacio.PreukWh" class="text-danger"></span>
 	</div>
+	@* Coste total *@
 	<div class="form-group">
-		<label asp-for="Simulacio.CostTotal"></label>
-		<input asp-for="Simulacio.CostTotal" class="form-control" />
 		<span asp-validation-for="Simulacio.CostTotal" class="text-danger"></span>
 	</div>
+	@* Precio total *@
 	<div class="form-group">
-		<label asp-for="Simulacio.PreuTotal"></label>
-		<input asp-for="Simulacio.PreuTotal" class="form-control" />
 		<span asp-validation-for="Simulacio.PreuTotal" class="text-danger"></span>
 	</div>
 	<button type="submit" class="btn btn-primary">Afegir</button>

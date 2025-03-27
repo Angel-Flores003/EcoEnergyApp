@@ -6,7 +6,7 @@ namespace gestioenergia.Pages
 {
     public class IndEnergModel : PageModel
     {
-        public List<IndicadorEnergetic> Energi { get; set; } = new List<IndicadorEnergetic>();
+        public List<IndicadorsEnergetics> Energi { get; set; } = new List<IndicadorsEnergetics>();
         public void OnGet()
         {
             string filePath = "energia.csv";
@@ -18,7 +18,7 @@ namespace gestioenergia.Pages
                     var parts = line.Split(',');
                     if (parts.Length == 3)
                     {
-                        var energia = new IndicadorEnergetic
+                        var energia = new IndicadorsEnergetics
                         {
                             ID = int.Parse(parts[0]),
                             Name = parts[1],
